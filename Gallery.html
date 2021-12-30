@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gallery</title>
+</head>
+<body>
+    <Section>
+        <ul>
+           <li class="list active" data-filter="all">ALL</li>
+           <li class="list" data-filter="healthysnacks">Healthy snacks</li>
+           <li class="list" data-filter="snacksforkids">Snacks for kids</li>
+           <li class="list" data-filter="easyonstomachsnacks">Easy on stomach snacks</li>
+           <li class="list" data-filter="smoothies">Smoothies</li> 
+        </ul>
+            <div class="product">
+            <div class="itemBox healthysnacks"> <img src="img/hn1.jpg"> </div>
+            <div class="itemBox snacksforkids"> <img src="img/sfk1.jpg"> </div>
+            <div class="itemBox easyonstomachsnacks"> <img src="img/es1.jpg"> </div>
+            <div class="itemBox smoothies"> <img src="img/smt1.jpg"> </div>
+
+            <div class="itemBox healthysnacks"> <img src="img/hn2.jpg"> </div>
+            <div class="itemBox snacksforkids"> <img src="img/sfk2.jpg"> </div>
+            <div class="itemBox easyonstomachsnacks"> <img src="img/es2.jpg"> </div>
+            <div class="itemBox smoothies"> <img src="img/smt2.jpg"> </div>
+
+            <div class="itemBox healthysnacks"> <img src="img/hn3.jpg"> </div>
+            <div class="itemBox snacksforkids"> <img src="img/sfk3.jpg"> </div>
+            <div class="itemBox easyonstomachsnacks"> <img src="img/es3.jpg"> </div>
+            <div class="itemBox smoothies"> <img src="img/smt3.jpg"> </div>
+
+            <div class="itemBox healthysnacks"> <img src="img/hn4.jpg"> </div>
+            <div class="itemBox snacksforkids"> <img src="img/sfk4.jpg"> </div>
+            <div class="itemBox easyonstomachsnacks"> <img src="img/es4.jpg"> </div>
+            <div class="itemBox smoothies"> <img src="img/smt4.jpg"> </div>
+
+            <div class="itemBox healthysnacks"> <img src="img/hn5.jpg"> </div>
+            <div class="itemBox snacksforkids"> <img src="img/sfk5.jpg"> </div>
+            <div class="itemBox easyonstomachsnacks"> <img src="img/es5.jpg"> </div>
+            <div class="itemBox smoothies"> <img src="img/smt5.jpg"> </div>
+
+            <div class="itemBox healthysnacks"> <img src="img/hn6.jpg"> </div>
+            <div class="itemBox snacksforkids"> <img src="img/sfk6.jpg"> </div>
+            <div class="itemBox easyonstomachsnacks"> <img src="img/es6.jpg"> </div>
+            <div class="itemBox smoothies"> <img src="img/smt6.jpg"> </div>
+
+            <div class="itemBox healthysnacks"> <img src="img/hn7.jpg"> </div>
+            <div class="itemBox snacksforkids"> <img src="img/sfk7.jpg"> </div>
+            <div class="itemBox easyonstomachsnacks"> <img src="img/es7.jpg"> </div>
+            <div class="itemBox smoothies"> <img src="img/smt7.jpg"> </div>
+
+            <div class="itemBox healthysnacks"> <img src="img/hn8.jpg"> </div>
+            <div class="itemBox snacksforkids"> <img src="img/sfk8.jpg"> </div>
+            <div class="itemBox easyonstomachsnacks"> <img src="img/es8.jpg"> </div>
+            <div class="itemBox smoothies"> <img src="img/smt8.jpg"> </div>
+
+            <div class="itemBox healthysnacks"> <img src="img/hn9.jpg"> </div>
+            <div class="itemBox snacksforkids"> <img src="img/sfk9.jpg"> </div>
+            <div class="itemBox easyonstomachsnacks"> <img src="img/es9.jpg"> </div>
+            <div class="itemBox smoothies"> <img src="img/smt9.jpg"> </div>
+
+            <div class="itemBox healthysnacks"> <img src="img/hn10.jpg"> </div>
+            <div class="itemBox snacksforkids"> <img src="img/sfk10.jpg"> </div>
+            <div class="itemBox easyonstomachsnacks"> <img src="img/es10.jpg"> </div>
+            <div class="itemBox smoothies"> <img src="img/smt10.jpg"> </div>
+
+        </div>
+    </Section>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.list').click(function(){
+            const value = $(this).attr('data-filter');
+            if (value == 'all'){
+                $('.itemBox').show('1000');
+            }
+            else{
+                $('.itemBox').not('.'+value).hide('1000');
+                $('.itemBox').filter('.'+value).show('1000');
+            }
+
+        })
+        // add active class on selected item
+
+        $('.list').click(function(){
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+    })
+
+</script>
+
+</body>
+</html>
